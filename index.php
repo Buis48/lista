@@ -18,6 +18,7 @@
         </div>
         </div> 
  </div>
+ <?php $fecha = date('d');?>
  <script>
     function mayus(e) {
     e.value = e.value.toUpperCase();
@@ -31,9 +32,7 @@ function minus(e) {
         <div class="row justify-content-center">
             <div class="col-sm-8">
             <label  class="form-label">Nombre Completo.</label>
-            
             <input type="text" class="form-control" id="" name="nombreP" onkeyup="mayus(this);">
-            <!--<div class="form-text"></div> comprobar despues su uso -->
             </div>
             </div>
         </div>
@@ -41,14 +40,26 @@ function minus(e) {
         <div class="row p-2 justify-content-center">
             <div class=" col-sm-4">
                 <label  class="form-label">Correo electronico.</label>
-                <input type="text" class="form-control" id="" name="correoP" onkeyup="minus(this);">
+                <input type="email" class="form-control" name="correoP" onkeyup="minus(this);">
             </div>
-            
                 <div class="col-sm-4">    
-                <label  class="form-label">Repite tu correo electronico.</label>
-                <input type="text" class="form-control" id="" name="correoP" onkeyup="minus(this);">
+                <label  class="form-label">Palabra Clave 1</label>
+                <input type="text" class="form-control" id="palabraP" name="palabraP" onkeyup="minus(this);" onchange="toggleButton()">
                 </div>
-        </div> 
+        </div>
+        <script>
+function toggleButton(){
+             
+             var palabraR = document.getElementById('palabraP').value;
+             
+              if (  palabraR && '<?php echo $fecha;?>'){
+                        document.getElementById('envioF').disabled = false;                  
+              } else {
+                document.getElementById('envioF').disabled = true;
+              } 
+}
+
+        </script> 
 
         <div class="row p-2 justify-content-center">
             <div class="col-sm-2">
@@ -58,7 +69,7 @@ function minus(e) {
             <div class="col-sm-2">    
                 <label  class="form-label">Grado académico.</label>
                 <select class="form-select" name="gradoP">
-                <option selected>Selecciona</option>
+                <option selected>SELECCIONE</option>
                 <option value="Estudiante">Estudiante</option>
                 <option value="Medicina General">Medicina General</option>
                 <option value="Medicina Especialista">Medicina Especialista</option>
@@ -66,7 +77,7 @@ function minus(e) {
             </div>
             <div class="col-sm-2">    
             <label  class="form-label">Año de residencia.</label>
-            <input type="text" class="form-control" id="" name="anosrP" placeholder="Si es el caso, con número.">
+            <input type="text" class="form-control" id="" name="anosrP" placeholder="Con número.">
             </div>
             <div class="col-sm-2">    
                 <label  class="form-label">Institución.</label>
@@ -100,13 +111,21 @@ function minus(e) {
             </div>
         </div> 
         <div class="row p-2 justify-content-center">
-        <div class="col-sm-1 gy-2">
+        <div class="col-sm-2 gy-2">
         <input type="reset" value="Limpiar" class="form-control input-md btn btn-success" id="">
         </div>
         <div class="col-sm-4 gy-2">
-        <input type="submit" name="" value="Enviar" class="form-control input-md btn btn-dark" id="">
+        <input type="submit" name="envioF" id="envioF" value="Enviar" class="form-control input-md btn btn-dark" id="">
+        </div>
+        <div class="col-sm-2 gy-2">
+        <a href="../congen/generar.php" class="btn btn-success col-sm-12">Constancia</a>
         </div>
         </div>
+        <?php
+                    $fecha = date('Y-m-d');
+                    ?>
+        <input type="hidden" value="<?php echo $fecha;?>" id="" name="fechaP">
+        
     </form>
 </div>
 
@@ -116,4 +135,5 @@ function minus(e) {
 </body>
 <script src="js/jquery-3.6.4.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
 </html>

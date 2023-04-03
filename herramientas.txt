@@ -16,5 +16,24 @@ lista de cosas
 \\numero---edad
 \\lista---genero- masculino, femenino, prefiero no responder
 
+function toggleButton()
+            {
+                var fechas = ['2023-04-17','2023-04-18', '2023-04-20','2023-04-21' ];
+                var fechaR = document.get.ElementById('fechaP').value;
+                var palabraR = document.get.ElementById('palabraP').value;
+                if (fecha && fechaR) {
+                    document.getElementById('envioF').disabled = false;
+                } else {
+                    document.getElementById('envioF').disabled = true;
+                }
+            }
 
+
+
+            if (fecha && fechaR) {
+                document.getElementById('envioF').disabled = false;
+                } else {
+                    document.getElementById('envioF').disabled = true;
+               }
+            
 
