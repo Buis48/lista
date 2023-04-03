@@ -18,7 +18,6 @@
         </div>
         </div> 
  </div>
- <?php $fecha = date('d');?>
  <script>
     function mayus(e) {
     e.value = e.value.toUpperCase();
@@ -27,6 +26,7 @@ function minus(e) {
     e.value = e.value.toLowerCase();
 }
  </script>
+ <!-- funcion de activacion basica-->
  <div class="container-fluid">
     <form id="" action="" method="post">
         <div class="row justify-content-center">
@@ -36,7 +36,18 @@ function minus(e) {
             </div>
             </div>
         </div>
-       
+        <?php $token = date('d-m-Y');?>
+        <script>
+            function toggleButton(){ 
+             var palabraR = document.getElementById('palabraP').value;
+             var token = '<?php echo $token;?>';
+              if (  palabraR == token ){
+                document.getElementById('envioF').disabled = false;                  
+              } else {
+                document.getElementById('envioF').disabled = true;
+              } 
+}
+        </script> 
         <div class="row p-2 justify-content-center">
             <div class=" col-sm-4">
                 <label  class="form-label">Correo electronico.</label>
@@ -44,23 +55,9 @@ function minus(e) {
             </div>
                 <div class="col-sm-4">    
                 <label  class="form-label">Palabra Clave 1</label>
-                <input type="text" class="form-control" id="palabraP" name="palabraP" onkeyup="minus(this);" onchange="toggleButton()">
+                <input type="text" class="form-control" id="palabraP" name="palabraP" onkeyup="toggleButton()">
                 </div>
         </div>
-        <script>
-function toggleButton(){
-             
-             var palabraR = document.getElementById('palabraP').value;
-             
-              if (  palabraR && '<?php echo $fecha;?>'){
-                        document.getElementById('envioF').disabled = false;                  
-              } else {
-                document.getElementById('envioF').disabled = true;
-              } 
-}
-
-        </script> 
-
         <div class="row p-2 justify-content-center">
             <div class="col-sm-2">
                 <label  class="form-label">Cedula profesional.</label>
@@ -115,16 +112,16 @@ function toggleButton(){
         <input type="reset" value="Limpiar" class="form-control input-md btn btn-success" id="">
         </div>
         <div class="col-sm-4 gy-2">
-        <input type="submit" name="envioF" id="envioF" value="Enviar" class="form-control input-md btn btn-dark" id="">
+        <input type="submit" name="envioF" id="envioF" value="Enviar" class="form-control input-md btn btn-dark">
         </div>
         <div class="col-sm-2 gy-2">
         <a href="../congen/generar.php" class="btn btn-success col-sm-12">Constancia</a>
         </div>
         </div>
         <?php
-                    $fecha = date('Y-m-d');
+                    $fechaU = date('Y-m-d');
                     ?>
-        <input type="hidden" value="<?php echo $fecha;?>" id="" name="fechaP">
+        <input type="hidden" value="<?php echo $fechaU;?>" id="" name="fechaP">
         
     </form>
 </div>
@@ -137,3 +134,5 @@ function toggleButton(){
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
 </html>
+
+
