@@ -9,8 +9,18 @@
     
 </head>
 <body class="font-family" style="background-color: #87CEFA ;">
-    <br>
-<div class="container-xxl p-3 px-1 text-center">
+<script>  
+    function mayus(e) {
+    e.value = e.value.toUpperCase();
+}
+function minus(e) {
+    e.value = e.value.toLowerCase();
+}
+
+ </script>    
+<br>
+
+<div class="container-xxl py-4 text-center">
        <div class="row justify-content-center">  
         <div class="col-lg-11">
             <h6 class="h2">1° Jornada Académica de Residentes de Medicina Familiar.</h6>
@@ -18,15 +28,6 @@
         </div>
         </div> 
  </div>
- <script>
-    function mayus(e) {
-    e.value = e.value.toUpperCase();
-}
-function minus(e) {
-    e.value = e.value.toLowerCase();
-}
- </script>
- <!-- funcion de activacion basica-->
  <div class="container-fluid">
     <form id="" action="" method="post">
         <div class="row justify-content-center">
@@ -36,6 +37,7 @@ function minus(e) {
             </div>
             </div>
         </div>
+         <!-- funcion de activacion basica -->
         <?php $token = date('d-m-Y');?>
         <script>
             function toggleButton(){ 
@@ -46,16 +48,18 @@ function minus(e) {
               } else {
                 document.getElementById('envioF').disabled = true;
               } 
-}
+            }
         </script> 
+        
+        
         <div class="row p-2 justify-content-center">
             <div class=" col-sm-4">
                 <label  class="form-label">Correo electronico.</label>
-                <input type="email" class="form-control" name="correoP" onkeyup="minus(this);">
+                <input type="email" class="form-control" name="correoP" onkeyup="minus(this);" required>
             </div>
                 <div class="col-sm-4">    
-                <label  class="form-label">Palabra Clave 1</label>
-                <input type="text" class="form-control" id="palabraP" name="palabraP" onkeyup="toggleButton()">
+                <label  class="form-label">Fecha Actual.</label>
+                <input type="text" class="form-control" id="palabraP" name="" onkeyup="toggleButton()" placeholder="dd-mm-aaaa" requiered>
                 </div>
         </div>
         <div class="row p-2 justify-content-center">
@@ -115,14 +119,11 @@ function minus(e) {
         <input type="submit" name="envioF" id="envioF" value="Enviar" class="form-control input-md btn btn-dark">
         </div>
         <div class="col-sm-2 gy-2">
-        <a href="../congen/generar.php" class="btn btn-success col-sm-12">Constancia</a>
+        <input type="button" name="" id="" value="Constancia" class="form-control btn btn-success col-sm-12" onclick ="location.href= '../congen/generar.php'" >       
         </div>
         </div>
-        <?php
-                    $fechaU = date('Y-m-d');
-                    ?>
-        <input type="hidden" value="<?php echo $fechaU;?>" id="" name="fechaP">
-        
+        <?php $fechaU = date('Y-m-d'); ?>
+        <input type="hidden" value="<?php echo $fechaU;?>" id="" name="fechaP">        
     </form>
 </div>
 
@@ -130,8 +131,8 @@ function minus(e) {
 
 
 </body>
-<script src="js/jquery-3.6.4.min.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.4.min.js" type="text/javascript"></>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></scrip>
 
 </html>
 

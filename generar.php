@@ -10,6 +10,48 @@
 </head>
 <body>
 
+<!--style="background-color: #87CEFA ;"-->
+<div class="container-fluid col-sm-9 py-4 ">
+    <div class="row justify-content-center ">
+    <div class="card">
+  <div class="card-header text-center">
+    <h6 class="h2">Ficha para generar constancia de participación.</h6>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title">Rellena con tus datos, si cumples con los criterios de asistencia, se te generara automáticamente la constancia.</h6>
+    <p class="card-text">
+        <form id="" action="" method= "post">
+        <div class="row p-2 justify-content-center">
+            <div class="col-sm-4">
+                <label class="form-label">Nombre completo.</label>
+                <input type="text" class="form-control" id="" name="nombreC" onkeyup="mayus(this);">
+            </div>
+            <div class="col-sm-4">
+                <label class="form-label">Cedula Profesional.</label>
+                <input type="text" class="form-control" id="" name="cedulaC">
+            </div>
+            <div class="col-sm-4">
+                 <label class="form-label">Correo electronico.</label>
+                 <input type="text" class="form-control" id="" name="correoC">
+            </div>
+        </div>
+        <div class="row p-2 justrify-content-center">
+        <div class="col-sm-6 gy-2">
+        <input type="button" name="" id="" value="Generar Constancia" class="form-control btn btn-success">       
+        </div>
+        </div> 
+        </form>
+    </p>
+    <p calss="cart-text">
+    <figcaption class="blockquote-footer">
+    Se abrirá una ventana secundaria, donde podrás descargar o imprimir la misma.
+  </figcaption>
+    </p>
+        
+  </div>
+</div>
+    </div>
+</div>
 
 </body>
 <script src="js/jquery-3.6.4.min.js" type="text/javascript"></script>
