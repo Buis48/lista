@@ -6,16 +6,27 @@ bootstrap
 
 
 lista de cosas
+NOMBRE-->VALOR-->TIPO DE DATO-->LIMITE DE CARACTERES//
 
-\\campo de texto--nombre completo
-\\texto, correos--correo electronico
-\\texto, numeros---cedula profesional
-\\lista---grado academico  -- estudiante, medicina general, medicina especialista
-\\opcional o nullo-año de residecia 
-\\lista--- institucion, colocar solo unam, ipn, issste, imss, otrotexto_--ciudad
-\\numero---edad
-\\lista---genero- masculino, femenino, prefiero no responder
+bd lista_cons
 
+id--1key-->valor de referencia
+nombre_par---2nombre -->aaaaaaaa-->tinytext--> 55
+correo_par--3correo electronico-->ads@ejemplo.com--> tinytext-->40
+cedula_par---4cedula profesional--> 0000000000000000000 ---> tinytext --> 16
+grado_par---5grado academico  --> estudiante, medicina general, medicina especialista --> tinytext --> 22
+resi_par---6año de residecia  --> 00 --> tinyint --> 2
+inst_par---7institucion-->unam, ipn, issste, imss, otro --> tinytext -->6
+ciudad_par--x8ciudad-->nombre de ciudad --> tinytext --> 80
+edad_par--9edad-->00--tinyint-->2
+genero_par--10genero-->masculino, femenino, prefiero no responder-->tinytext-->21 caracteres max
+DIAS
+seran numerados 
+dia_uno--11.d17-->valor 1 ó 0-->tipo de dato bit
+dia_dos--12.d18-->valor 1 ó 0-->tipo de dato bit
+dia_tres--13.d20-->valor 1 ó 0-->tipo de dato bit
+dia_cuatro--14.d21-->valor 1 ó 0-->tipo de dato bit
+fehca_par sera la fecha de el ultimo registro, como comprobante de autorizacion para generar 
 function toggleButton()
             {
                 var fechaR = document.get.ElementById('fechaP').value;
