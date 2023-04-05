@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-04-2023 a las 23:04:10
+-- Tiempo de generación: 05-04-2023 a las 20:47:58
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -42,7 +42,8 @@ CREATE TABLE `datos_participantes` (
   `dia_dos` tinyint(1) NOT NULL,
   `dia_tres` tinyint(1) NOT NULL,
   `dia_cuatro` tinyint(1) NOT NULL,
-  `fecha_par` date NOT NULL
+  `fecha_par` date NOT NULL,
+  `hash` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --

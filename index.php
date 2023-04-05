@@ -29,7 +29,7 @@
                     <p class="lead">Formulario de participación.</p>
                 </div>
                 <div class="card-body">
-                    <form id="" action="" method="post">
+                    <form id="" action="registro.php" method="post">
                         <div class="row justify-content-center">
                             <div class="col-sm-11">
                                 <label class="form-label">Nombre Completo.</label>
@@ -63,7 +63,7 @@
                 <div class="row p-2 justify-content-center">
                     <div class="col-sm-3">
                         <label class="form-label">Cedula profesional.</label>
-                        <input type="text" class="form-control" id="" name="cedulaP">
+                        <input type="number" class="form-control" id="" name="cedulaP">
                     </div>
                     <div class="col-sm-3">
                         <label class="form-label">Grado académico.</label>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-sm-3">
                         <label class="form-label">Año de residencia.</label>
-                        <input type="text" class="form-control" id="" name="anosrP" placeholder="Con número.">
+                        <input type="number" class="form-control" id="" name="anosrP" placeholder="Con número.">
                     </div>
                     <div class="col-sm-2">
                         <label class="form-label">Institución.</label>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="col-sm-3">
                         <label class="form-label">Edad.</label>
-                        <input type="text" class="form-control" id="" name="edadP">
+                        <input type="number" class="form-control" id="" name="edadP">
                     </div>
                     <div class="col-sm-3">
                         <label class="form-label">Genero.</label>
@@ -114,13 +114,13 @@
                         <input type="reset" value="Limpiar" class="form-control input-md btn btn-success" id="">
                     </div>
                     <div class="col-sm-4 gy-2">
-                        <input type="submit" name="envioF" id="envioF" value="Enviar"
+                        <input type="submit" name="" id="envioF" value="Enviar"
                             class="form-control input-md btn btn-dark">
                     </div>
                     <div class="col-sm-2 gy-2">
                         <input type="button" name="" id="" value="Constancia"
                             class="form-control btn btn-success col-sm-12"
-                            onclick="location.href= '../congen/generar.php'">
+                            onclick="location.href= '../congen/solicitud.php'" disabled="true">
                     </div>
                 </div>
                 <?php $fechaU = date('Y-m-d'); ?>
