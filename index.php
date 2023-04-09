@@ -38,12 +38,14 @@
                         </div>
                 </div>
                 <!-- funcion de activacion basica -->
-                <?php $token = date('d-m-Y');?>
+                <?php
+                date_default_timezone_set('America/Mexico_City');
+                 $token = date('d-m-Y');?>
                 <script>
                 function toggleButton() {
                     var palabraR = document.getElementById('palabraP').value;
-                    var token = '<?php echo $token;?>';
-                    if (palabraR == token) {
+                    
+                    if (palabraR == '<?php echo $token;?>') {
                         document.getElementById('envioF').disabled = false;
                     } else {
                         document.getElementById('envioF').disabled = true;
@@ -63,7 +65,7 @@
                 <div class="row p-2 justify-content-center">
                     <div class="col-sm-3">
                         <label class="form-label">Cedula profesional.</label>
-                        <input type="number" class="form-control" id="" name="cedulaP">
+                        <input type="text" class="form-control" id="" name="cedulaP">
                     </div>
                     <div class="col-sm-3">
                         <label class="form-label">Grado académico.</label>

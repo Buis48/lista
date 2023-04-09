@@ -47,3 +47,28 @@ function toggleButton()
                }
             
 
+
+
+
+{
+    else if($fecha='2023-04-21'){
+        $modif4 = "UPDATE datos_participantes SET dia_dos = '$tok1' WHERE correo_par = '$correo' ";
+        $mod4 = mysqli_query($enlace,$modif4);
+
+    } else if ($fecha='2023-04-20'){
+        $modif3 = "UPDATE datos_participantes SET dia_dos = '$tok1' WHERE correo_par = '$correo' ";
+        $mod3 = mysqli_query($enlace,$modif3);
+
+    }else if ($fecha='2023-04-18'){
+        $modif2 = "UPDATE datos_participantes SET dia_dos = '$tok1' WHERE correo_par = '$correo' ";
+        $mod2 = mysqli_query($enlace,$modif2);
+
+    }else if ($fecha='2023-04-17'){
+
+    $insCom = "INSERT INTO datos_participantes(`nombre_par`, `correo_par`, `cedula_par`, `grado_par`, `resi_par`, `inst_par`, `ciudad_par`, `edad_par`, `genero_par`, `dia_uno`)VALUES('$nombre','$correo','$cedula','$grado','$aor','$insti','$ciudad','$edad','$genero','$tok1')";
+    $query = mysqli_query($enlace,$insCom);
+}
+} else {
+        echo "registro ya hecho o fuera de tiempo";
+
+}
