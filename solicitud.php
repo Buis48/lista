@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <h6 class="card-title">Rellena con tus datos, si cumples con los criterios de asistencia, se te
                         generara automáticamente la constancia.</h6>
-                    <form id="" action="" method="post">
+                    <form id="" action="generar.php" method="post">
                         <div class="row p-2 justify-content-center">
                             <div class="col-sm-4">
                                 <label class="form-label">Nombre completo.</label>
@@ -42,6 +42,13 @@
                             <div class="col-sm-4">
                                 <label class="form-label">Correo electronico.</label>
                                 <input type="text" class="form-control" id="" name="correoC">
+                            </div>
+                        </div>
+                        
+                        <div class="row p-2 justify-content-left">
+                        <div class="col-sm-9">
+                                <label class="form-label">CURP</label>
+                                <input type="text" class="form-control" id="" name="curpC" onkeyup="mayus(this);">
                             </div>
                         </div>
                         <div class="row p-2 justrify-content-center">

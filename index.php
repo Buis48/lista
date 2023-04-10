@@ -10,7 +10,7 @@
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
 </head>
-
+<!--maxlength="600" para limitar los caracteres -->
 <body class="font-family" style="background-color: #87CEFA ;">
     <script>
     function mayus(e) {
@@ -33,7 +33,7 @@
                         <div class="row justify-content-center">
                             <div class="col-sm-11">
                                 <label class="form-label">Nombre Completo.</label>
-                                <input type="text" class="form-control" id="" name="nombreP" onkeyup="mayus(this);">
+                                <input type="text" class="form-control" id="" name="nombreP" onkeyup="mayus(this);" maxlength="50">
                             </div>
                         </div>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="row p-2 justify-content-center">
                     <div class="col-sm-3">
                         <label class="form-label">Cedula profesional.</label>
-                        <input type="text" class="form-control" id="" name="cedulaP">
+                        <input type="text" class="form-control" id="" name="cedulaP" maxlength="15">
                     </div>
                     <div class="col-sm-3">
                         <label class="form-label">Grado académico.</label>
@@ -95,7 +95,7 @@
                 <div class="row p-2 justify-content-center">
                     <div class="col-sm-5">
                         <label class="form-label">Ciudad de residencia.</label>
-                        <input type="text" class="form-control" id="" name="ciudadP" onkeyup="mayus(this);">
+                        <input type="text" class="form-control" id="" name="ciudadP" onkeyup="mayus(this);" maxlength="45">
                     </div>
                     <div class="col-sm-3">
                         <label class="form-label">Edad.</label>
@@ -122,7 +122,7 @@
                     <div class="col-sm-2 gy-2">
                         <input type="button" name="" id="" value="Constancia"
                             class="form-control btn btn-success col-sm-12"
-                            onclick="location.href= '../congen/solicitud.php'" disabled="true">
+                            onclick="location.href= '../gencon/solicitud.php'" disabled="false">
                     </div>
                 </div>
                 <?php $fechaU = date('Y-m-d'); ?>
