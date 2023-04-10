@@ -1,5 +1,11 @@
 <?php
-$enlace = mysqli_connect("127.0.0.1", "root", "", "lista_cons");
+$ip = "";
+$user = "root";
+$pass = "";
+$base = "lista_cons";
+
+
+$enlace = mysqli_connect($ip, $user,"" , $base );
 //if (!$enlace) {
   //  echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
     //echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;

@@ -53,7 +53,7 @@
                         </div>
                         <div class="row p-2 justrify-content-center">
                             <div class="col-sm-6 gy-2">
-                                <input type="button" name="" id="" value="Generar Constancia"
+                                <input type="submit" name="" id="" value="Generar Constancia"
                                     class="form-control btn btn-success">
                             </div>
                         </div>
