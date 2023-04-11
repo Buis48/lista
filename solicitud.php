@@ -10,10 +10,9 @@
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 
-<body>
-<div class="bg-image d-flex justify-content-center align-items-center" 
-     style="background-image: url('img/fondo.jpg');
-            height: 100vh">
+<body style="background-image: url('img/fondo.jpg');
+            height: 100vh;
+            background-size:cover;background-color: #87CEFA;">>
     <script>
     function mayus(e) {
         e.value = e.value.toUpperCase();
@@ -22,17 +21,15 @@
         e.value = e.value.toLowerCase();
     }
     </script>
-    <!--style="background-color: #87CEFA ;"-->
-    <div class="container-fluid col-sm-9 py-sm-4 py-xs-1">
-        <div class="row justify-content-center ">
+    <div class="d-flex justify-content-center align-items-center py-sm-5">
             <div class="card">
                 <div class="card-header text-center">
                     <h6 class="h2">Ficha para generar constancia de participación.</h6>
                 </div>
                 <div class="card-body">
-                    <h6 class="card-title">Rellena con tus datos, si cumples con los criterios de asistencia, se te
+                    <h6 class="card-title">Rellena con tus datos, si cumples con los criterios de asistencia, se
                         generara automáticamente la constancia.</h6>
-                    <form id="" action="generar.php" method="post">
+                    <form id="" action="constancia.php" method="post">
                         <div class="row p-2 justify-content-center">
                             <div class="col-sm-4">
                                 <label class="form-label">Nombre completo.</label>
@@ -44,7 +41,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <label class="form-label">Correo electronico.</label>
-                                <input type="text" class="form-control" id="" name="correoC">
+                                <input type="email" class="form-control" id="" name="correoC">
                             </div>
                         </div>
                         
@@ -68,9 +65,7 @@
                     </p>
                 </div>
             </div>
-        </div>
     </div>
-</div>
 </body>
 <script src="js/jquery-3.6.4.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"

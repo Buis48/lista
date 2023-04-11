@@ -11,10 +11,9 @@
 
 </head>
 <!--maxlength="600" para limitar los caracteres -->
-<body class="font-family" style="background-color: #87CEFA;">
-<div class="bg-image d-flex justify-content-center align-items-center" 
-     style="background-image: url('img/fondo.jpg');
-            height: 100vh">
+<body class="font-family" style="background-image: url('img/fondo2.jpg');
+            height: 100vh;
+            background-size:cover;background-color: #87CEFA;">
     <script>
     function mayus(e) {
         e.value = e.value.toUpperCase();
@@ -24,8 +23,7 @@
     }
     </script>
     <br>
-    <div class="container-fluid col-sm-10 py-sm-4 py-xs-1">
-        <div class="row justify-content-center">
+    <div class="d-flex justify-content-center align-items-center py-sm-5">
             <div class="card">
                 <div class="card-header">
                     <h6 class="h2">1° Jornada Académica de Residentes de Medicina Familiar.</h6>
@@ -134,10 +132,8 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
+    
 </body>
-<script src="js/jquery-3.6.4.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
 </script>
