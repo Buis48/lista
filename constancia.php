@@ -59,6 +59,7 @@ $pdf->SetFont('verb','',10);
 $pdf->SetDrawColor(187,148,91);
 $pdf->SetLineWidth(.5);
 $pdf->Line(60,230,150,230);
+$pdf->Image('img/fir.png',80,180,0,60,'PNG');
 $pdf->SetY(230);
 $pdf->Cell(0,10,utf8_decode('DRA. C. GABRIELA CLAVEL BENÍTEZ '),0,1,'C');
 $pdf->SetFont('ver','',10);
