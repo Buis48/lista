@@ -1,4 +1,0 @@
-Fuentes 
-georiga
-palatino
-verdana

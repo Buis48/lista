@@ -11,7 +11,10 @@
 
 </head>
 <!--maxlength="600" para limitar los caracteres -->
-<body class="font-family" style="background-color: #87CEFA ;">
+<body class="font-family" style="background-color: #87CEFA;">
+<div class="bg-image d-flex justify-content-center align-items-center" 
+     style="background-image: url('img/fondo.jpg');
+            height: 100vh">
     <script>
     function mayus(e) {
         e.value = e.value.toUpperCase();
@@ -130,6 +133,7 @@
                 </form>
             </div>
         </div>
+    </div>
     </div>
     </div>
 </body>
