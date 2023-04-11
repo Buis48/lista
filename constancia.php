@@ -5,7 +5,6 @@ $cedula= $_POST['cedulaC'];
 $correo= $_POST['correoC'];
 $curp= $_POST['curpC'];
 $encrip = hash('sha256',$curp);
-
 $query = "SELECT dia_uno,dia_dos,dia_tres,dia_cuatro FROM datos_participantes WHERE correo_par = '$correo' && cedula_par = '$cedula'";
 $resultado = mysqli_query($enlace, $query);
 if($resultado -> num_rows> 0){
@@ -55,7 +54,7 @@ $pdf->SetFont('palatino','',20);
 $pdf->Cell(0,8,utf8_decode('ASISTENTE'),0,1,'C',);
 $pdf->SetFont('ver','',15);
 $pdf->Cell(0,8,utf8_decode('Efectuado en la Clínica de Medicina Familiar '),0,1,'C');
-$pdf->Cell(0,8,utf8_decode('Marina Nacional. 12 hora.'),0,1,'C');
+$pdf->Cell(0,8,utf8_decode('"Marina Nacional." Completando un total de 16 horas.'),0,1,'C');
 $pdf->SetFont('verb','',10);
 $pdf->SetDrawColor(187,148,91);
 $pdf->SetLineWidth(.5);
