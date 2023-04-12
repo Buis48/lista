@@ -43,7 +43,7 @@ CREATE TABLE `datos_participantes` (
   `dia_tres` tinyint(1) NOT NULL,
   `dia_cuatro` tinyint(1) NOT NULL,
   `fecha_par` date NOT NULL,
-  `hash` varchar(70) NOT NULL
+  `hash_par` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --
