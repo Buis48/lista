@@ -1,11 +1,11 @@
- -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 05-04-2023 a las 20:47:58
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.2.0
+-- Servidor: localhost:3306
+-- Tiempo de generación: 12-04-2023 a las 12:05:09
+-- Versión del servidor: 8.0.32
+-- Versión de PHP: 8.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `lista_cons`
+-- Base de datos: `mexico3d_list_cons`
 --
 
 -- --------------------------------------------------------
@@ -28,22 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `datos_participantes` (
-  `id` int(11) NOT NULL,
-  `nombre_par` tinytext NOT NULL,
-  `correo_par` tinytext NOT NULL,
-  `cedula_par` int(16) NOT NULL,
-  `grado_par` tinytext NOT NULL,
-  `resi_par` tinyint(2) NOT NULL,
-  `inst_par` tinytext NOT NULL,
-  `ciudad_par` tinytext NOT NULL,
-  `edad_par` tinyint(2) NOT NULL,
-  `genero_par` tinytext NOT NULL,
-  `dia_uno` tinyint(1) NOT NULL,
-  `dia_dos` tinyint(1) NOT NULL,
-  `dia_tres` tinyint(1) NOT NULL,
-  `dia_cuatro` tinyint(1) NOT NULL,
-  `fecha_par` date NOT NULL,
-  `hash_par` varchar(70) NOT NULL
+  `id` int NOT NULL,
+  `nombre_par` char(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT 'A',
+  `correo_par` char(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT 'CC',
+  `cedula_par` char(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `grado_par` char(22) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT 'GA',
+  `resi_par` text COLLATE utf8mb4_spanish2_ci,
+  `inst_par` char(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT 'INS',
+  `ciudad_par` char(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `edad_par` int NOT NULL DEFAULT '0',
+  `genero_par` char(22) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `dia_uno` tinyint(1) NOT NULL DEFAULT '0',
+  `dia_dos` tinyint(1) NOT NULL DEFAULT '0',
+  `dia_tres` tinyint(1) NOT NULL DEFAULT '0',
+  `dia_cuatro` tinyint(1) NOT NULL DEFAULT '0',
+  `fecha_par` date DEFAULT NULL,
+  `hash_par` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --
@@ -64,7 +64,7 @@ ALTER TABLE `datos_participantes`
 -- AUTO_INCREMENT de la tabla `datos_participantes`
 --
 ALTER TABLE `datos_participantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
