@@ -12,7 +12,7 @@
 
 <body style="background-image: url('img/fondo.jpg');
             height: 100vh;
-            background-size:cover;background-color: #87CEFA;">>
+            background-size:cover;background-color: #87CEFA;">
     <script>
     function mayus(e) {
         e.value = e.value.toUpperCase();
